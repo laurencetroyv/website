@@ -6,6 +6,17 @@ export default defineNuxtConfig({
 
   modules: ["@primevue/nuxt-module", "@nuxt/eslint"],
   devtools: { enabled: true },
+  app: {
+    head: {
+      script: [{
+        "src": "https://cloud.umami.is/script.js",
+        "async": true,
+        "defer": true,
+        "data-domains": "laurencetroyv.dev",
+        "data-website-id": process.env.NUXT_UMAMI_WEBSITE_ID,
+      }],
+    },
+  },
 
   css: ["~/assets/css/main.css"],
   compatibilityDate: "2025-07-15",

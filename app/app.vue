@@ -1,10 +1,10 @@
 <template>
-  <div>
-    <Analytics />
-    <SpeedInsights />
+  <Analytics />
+  <SpeedInsights />
+  <NuxtLayout>
     <NuxtRouteAnnouncer />
     <NuxtWelcome />
-  </div>
+  </NuxtLayout>
 </template>
 
 <script lang="ts" setup>
