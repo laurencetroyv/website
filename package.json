@@ -1,13 +1,14 @@
 {
-  "name": "nuxt-app",
+  "name": "laurencetroyv",
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "build": "nuxt build",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "generate": "nuxt generate",
+    "postinstall": "nuxt prepare",
+    "lint:fix": "eslint ./app --fix"
   },
   "dependencies": {
     "@primeuix/themes": "^1.2.3",
@@ -24,6 +25,13 @@
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
-    "@primevue/nuxt-module": "^4.3.7"
+    "@nuxt/eslint": "1.9.0",
+    "@primevue/nuxt-module": "^4.3.7",
+    "eslint": "^9.0.0",
+    "eslint-plugin-perfectionist": "^4.15.0",
+    "eslint-plugin-vue": "^10.4.0",
+    "globals": "^16.3.0",
+    "typescript": "^5.9.2",
+    "vue-eslint-parser": "^10.2.0"
   }
 }
