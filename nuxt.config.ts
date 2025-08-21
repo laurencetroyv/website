@@ -19,6 +19,12 @@ export default defineNuxtConfig({
   },
 
   css: ["~/assets/css/main.css"],
+
+  runtimeConfig: {
+    appEnv: process.env.NUXT_PUBLIC_NODE_ENV,
+    umamiWebsiteId: process.env.NUXT_UMAMI_WEBSITE_ID,
+  },
+
   compatibilityDate: "2025-07-15",
 
   vite: {
@@ -49,19 +55,22 @@ export default defineNuxtConfig({
           },
         },
         preset: {
-          ...Aura.semantic,
-          primary: {
-            50: "#e9f5fc",
-            100: "#d3ebf8",
-            200: "#a6d7f2",
-            300: "#7ac3eb",
-            400: "#4eb0e4",
-            500: "#219cde",
-            600: "#1b7db1",
-            700: "#145d85",
-            800: "#0d3e59",
-            900: "#071f2c",
-            950: "#031016",
+          ...Aura,
+          semantic: {
+            ...Aura.semantic,
+            primary: {
+              50: "#eae9fc",
+              100: "#d4d2f9",
+              200: "#a9a5f3",
+              300: "#7e78ed",
+              400: "#534be7",
+              500: "#281fe0",
+              600: "#2018b4",
+              700: "#181287",
+              800: "#100c5a",
+              900: "#08062d",
+              950: "#040316",
+            },
           },
         },
       },
